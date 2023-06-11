@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  db:
+    container_name: ${DB_CONTAINER_NAME}
+    image: ${DB_CONTAINER_IMAGE}
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+       - postgres-db:/data/postgres
+    ports:
+      - ${DB_HOST_PORT}:${DB_CONTAINER_PORT}
+
+volumes:
+  postgres-db:
