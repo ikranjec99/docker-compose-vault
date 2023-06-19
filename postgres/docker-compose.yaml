@@ -1,16 +1,16 @@
 version: "3.8"
 services:
   postgres:
-    container_name: ${DB_CONTAINER_NAME}
+    container_name: ${POSTGRES_CONTAINER_NAME}
     environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-    image: ${DB_CONTAINER_IMAGE}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    image: ${POSTGRES_CONTAINER_IMAGE}
     restart: always
     volumes:
        - postgres-db:/data/postgres
     ports:
-      - ${DB_HOST_PORT}:${DB_CONTAINER_PORT}
+      - ${POSTGRES_HOST_PORT}:${POSTGRES_CONTAINER_PORT}
 
 volumes:
   postgres-db:
