@@ -2,12 +2,12 @@ version: "3.8"
 services:
   mssql:
     container_name: ${DB_CONTAINER_NAME}
-    image: ${DB_CONTAINER_IMAGE}
-    ports:
-      - ${DB_HOST_PORT}:${DB_CONTAINER_PORT}
     environment:
       - SA_PASSWORD=${DB_ADMIN_PASSWORD}
       - ACCEPT_EULA=Y
+    image: ${DB_CONTAINER_IMAGE}
+    ports:
+      - ${DB_HOST_PORT}:${DB_CONTAINER_PORT}
     volumes:
      - mssql-data:/var/opt/mssql
 
