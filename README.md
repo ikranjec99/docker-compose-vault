@@ -6,7 +6,7 @@ Simple repo which will store commonly used docker-compose files.
 
 ## Getting Started
 
-### Installing
+### Usage
 
 * Clone project or just copy config from desired service
 
