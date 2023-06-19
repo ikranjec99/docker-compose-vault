@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  mssql-db:
+  mssql:
     container_name: ${DB_CONTAINER_NAME}
     image: ${DB_CONTAINER_IMAGE}
     ports:
