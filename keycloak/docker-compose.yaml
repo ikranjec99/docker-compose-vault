@@ -14,7 +14,7 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
     image: ${KEYCLOAK_CONTAINER_IMAGE}
     ports:
-      - ${KEYCLOAK_HOST_PORT}:${KEYCLOAK_CONTAINER_PORT}
+      - ${KEYCLOAK_HOST_CONTAINER_PORT}:${KEYCLOAK_CONTAINER_PORT}
     volumes:
       - keycloak_data:/data
       - ./keycloak/providers:/opt/jboss/keycloak/providers
