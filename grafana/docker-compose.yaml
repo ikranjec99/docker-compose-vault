@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  grafana:
+    container_name: ${GF_CONTAINER_NAME}
+    image: ${GF_CONTAINER_IMAGE}
+    restart: always
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GF_SECURITY_ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${GF_SECURITY_ADMIN_PASSWORD}
+    ports:
+      - ${GF_HOST_PORT}:${GF_CONTAINER_HOST_PORT}
+    volumes:
+      - grafana_data:/var/lib/grafana
+volumes:
+  grafana_data:
